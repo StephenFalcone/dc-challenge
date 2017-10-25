@@ -1,0 +1,9 @@
+<h1> Events </h1>
+<div class="container">
+<h1> <%= @event.name %> </h1>
+<% @peopleAttend.each do |person| %>
+    <h3><%= person.first_name %> <%= person.last_name %></h3>
+    <p><%= person.email %></p>
+     <p>Address: <%= person.street %> - <%= person.city %>, <%= person.state %> <%= person.country %></p>
+<% end %>
+</div>

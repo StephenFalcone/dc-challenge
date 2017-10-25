@@ -1,0 +1,12 @@
+<h1> Events </h1>
+<div class="container">
+
+<% @events.each do |event| %>
+    <h3><%= event.name %></h3>
+    <p><%= event.date %></p>
+    <p><%= event.location %></p>
+    <p>Price: <%= event.price %></p>
+    <%= link_to "Attendance", event_path(event), :class => 'btn btn-default' %>
+<% end %>
+
+</div>
