@@ -3,23 +3,21 @@
   <head>
     <title>DcChallenge</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="/">Events</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-   
       </div>
     </nav>
+
     <%= yield %>
+
   </body>
 </html>

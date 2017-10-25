@@ -1,0 +1,16 @@
+Code Challenge Instructions
+
+This challenge will give us an idea about your coding skills. Don't worry if you can't finish all requirements in time. Just tell us how you would proceed.
+
+We're using Rails 4, RSpec 3.5 etc.
+
+In the `csv` folder you find some data files.
+
+## Tasks
+
+- Crate a new rails application (you can use sqlite or postgresql as your database engine)
+- Update the README inside with information on how to work with it if you think that some information might be helpful
+- Set up an appropriate data model for the data in the csv files
+- Create rake tasks to import the data in the csv files into the database (make sure to set the proper data associations)
+- Create a simple controller/view to show the list of people who attended an event (selecting an even should display the people who attended)
+- Create a simple REST API endpoint that returns a list of people as json. No authentication/authorization is needed here.
