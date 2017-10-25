@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install Instructions:
 
-Things you may want to cover:
+* clone git repo
 
-* Ruby version
+* edit database.yml if necessary
 
-* System dependencies
+* run command: rails db:create db:migrate
 
-* Configuration
+* run command: rake import_csv:all
 
-* Database creation
+Run 'rails s' and point browser to http://localhost:3000/
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Make GET requests to http://localhost:3000/event/#/json for raw JSON data, where # is event ID
+(or just press JSON button on event page)

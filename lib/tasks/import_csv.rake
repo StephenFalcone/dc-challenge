@@ -1,6 +1,6 @@
 require 'csv'    
 
-namespace :import_csv do
+namespace :import_csv do |import_csv_namespace|
   task :create_people => :environment do
     people = CSV.foreach('people.csv', :encoding => 'ISO-8859-1', headers:true) do |row|
 
@@ -36,6 +36,13 @@ namespace :import_csv do
 
     end
   end
+
+    task :all do
+    import_csv_namespace.tasks.each do |task|
+      Rake::Task[task].invoke
+      end
+    end
+  
   
 end 
 
