@@ -1,9 +1,25 @@
 <h1> Events </h1>
 <div class="container">
-<h1> <%= @event.name %> </h1>
-<% @peopleAttend.each do |person| %>
-    <h3><%= person.first_name %> <%= person.last_name %></h3>
-    <p><%= person.email %></p>
-     <p>Address: <%= person.street %> - <%= person.city %>, <%= person.state %> <%= person.country %></p>
-<% end %>
+
+<div class="jumbotron">
+   <h1 class="display-3"><%= @event.name %></h1>
+   <p><%= link_to "JSON", json_path, :class => 'btn btn-default' %></p>
+</div>
+
+  <div class="row">
+    <% @peopleAttend.each do |person| %>
+
+            <div class="col-6 col-lg-4">
+              <h2><%= person.first_name %> <%= person.last_name %></h2>
+              <p><strong>Gender: </strong><%= person.gender %></p>
+              <p><strong>Birthdate: </strong><%= person.birthdate.strftime("%B %-d, %Y") %></p>
+              <p><strong>Email: </strong><%= person.email %></p>
+              <p><strong>Address: </strong><%= person.street %> - <%= person.city %>, <%= person.state %> </p>
+              <p><strong>Country: </strong><%= person.country %></p><br>
+            </div><!--/span-->
+
+    <% end %>
+</div><!--/row-->
+ 
+
 </div>
